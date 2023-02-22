@@ -30,9 +30,11 @@ console.log(10%2);
 
 const answers = [];
 
-answers[0] =  prompt("How many 5+5", "");
-answers[1] =  prompt("How many 2+2", "");
-answers[2] =  prompt("How many 10+5", "");
-answers[3] =  prompt("How many 9+9", "");
+//answers[0] =  prompt("How many 5+5", "");
+//answers[1] =  prompt("How many 2+2", "");
+//answers[2] =  prompt("How many 10+5", "");
+//answers[3] =  prompt("How many 9+9", "");
 
-document.write(answers)
+
+let zoommeeting = prompt("Are you her now?", "");
+console.log(zoommeeting);
