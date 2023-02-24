@@ -1,40 +1,23 @@
 "use sctrict"
 
-//let abc = 3.4;
+const numberOfFilms = + prompt("Скільки фільмів ви вже переглянули?", "");
 
-//console.log(-3/0);
-
-const obj = {
-    age:29,
-    name:'Dodo',
-    isMarried: false
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {
+      'logan': '8.1'
+    },
+    actors:{},
+    genres:[],
+    privat: false
 };
 
-console.log(obj.name);
+const a = prompt('Один із останіх переглянутих фільмів?', ''),
+      b = prompt('Наскільки оцінете його?', '');
+      c = prompt('Один із останіх переглянутих фільмів?', ''),
+      d = prompt('Наскільки оцінете його?', '');
 
-const obb = ['mario.png', 'JS.txt', 2];
-console.log(obb[0]);
+personalMovieDB[a] = b;
+personalMovieDB[c] = d;
 
-let isClosed = false,
-    idOpened = false;
-
-console.log(isClosed || !idOpened);
-
-//const main = + prompt("Are you Baby?", "");
-//console.log(main + 10);
-
-let category = 'toys';
-console.log(`https://howmnany/${category}`);
-
-console.log(10%2);
-
-const answers = [];
-
-//answers[0] =  prompt("How many 5+5", "");
-//answers[1] =  prompt("How many 2+2", "");
-//answers[2] =  prompt("How many 10+5", "");
-//answers[3] =  prompt("How many 9+9", "");
-
-
-let zoommeeting = prompt("Are you her now?", "");
-console.log(zoommeeting);
+console.log(personalMovieDB);
