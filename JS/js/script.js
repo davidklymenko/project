@@ -1,37 +1,23 @@
 "use strict"
 
-if (2 == 2) {
-    console.log("Ok!");
-} else {
-    console.log("Error!");
-}
+const answersOfFilms = + prompt('How many movies you watch?', '');
 
-const few = 1000; 
+const payNewMoviesCinema = {
+    count: answersOfFilms,
+    movies: {
+        'logan': '8.1'
+    },
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-if (few < 500) {
-    console.log('No');
-} else if (few > 25000) {
-    console.log('Too many');
-} else if (few < -9 ) {
-    console.log('Too not many');
-} else {
-    console.log('Yep');
-}
+const a = prompt('Last one movie you watch?',''),
+      b = prompt('How much do you rate it?','');
+      c = prompt('Last one movie you watch?',''),
+      d = prompt('How much do you rate it?','');
 
-(few == 1000) ? console.log('Yep') : console.log('No');
-
-const haveFun = 50;
-
-switch (haveFun) {
-    case 40:
-        console.log('No');
-        break;
-    case 49:
-    console.log('No');
-        break;
-    case 51:
-    console.log('Yes');
-        break;
-    default: 
-    console.log('Not this time')
-}
+payNewMoviesCinema[a] = b;
+payNewMoviesCinema[c] = d;
+      
+console.log(payNewMoviesCinema);
