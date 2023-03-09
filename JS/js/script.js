@@ -1,23 +1,37 @@
 "use strict"
 
-const answersOfFilms = + prompt('How many movies you watch?', '');
+for (let i = 0; i < 3; i++) {
+    console.log(i);
+    for (let j = 0; j < 3; j++) {
+        console.log(j);
+    }
+}
 
-const payNewMoviesCinema = {
-    count: answersOfFilms,
-    movies: {
-        'logan': '8.1'
-    },
-    actors: {},
-    genres: [],
-    privat: false
-};
+//*
+//**
+//***
+//****
+//*****
+//******
 
-const a = prompt('Last one movie you watch?',''),
-      b = prompt('How much do you rate it?','');
-      c = prompt('Last one movie you watch?',''),
-      d = prompt('How much do you rate it?','');
+let result = '';
+const lenght = 7;
 
-payNewMoviesCinema[a] = b;
-payNewMoviesCinema[c] = d;
-      
-console.log(payNewMoviesCinema);
+  for (let i = 1; i < lenght; i++) { 
+       for (let j = 0; j < i; j++) {
+            result += '*';
+       }
+    result += '\n';
+  } 
+console.log(result);
+
+first: for (let i = 0; i < 3; i++) {
+    console.log(`First level: ${i}`);
+    for (let j = 0; j < 3; j++) {
+        console.log(`Second level: ${j}`);
+    }
+    for (let k = 0; k < 5; k++) {
+        if (k === 2) break first
+        console.log(`Third level: ${k}`);
+    }
+}
