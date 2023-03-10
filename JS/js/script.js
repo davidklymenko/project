@@ -1,37 +1,27 @@
 "use strict"
 
-for (let i = 0; i < 3; i++) {
-    console.log(i);
-    for (let j = 0; j < 3; j++) {
-        console.log(j);
+const numberOfFilms = +prompt('How many movies you watch?', '');
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+
+for (let i = 0; i < 2; i++) {
+    const a = prompt('Last one movie you watch?', ''),
+          b = prompt('How much do you rate it?', '');
+
+    if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+        personalMovieDB[a] = b;
+        console.log('done'); 
+    } else {
+        console.log('error');
+        i--;
     }
+
 }
 
-//*
-//**
-//***
-//****
-//*****
-//******
-
-let result = '';
-const lenght = 7;
-
-  for (let i = 1; i < lenght; i++) { 
-       for (let j = 0; j < i; j++) {
-            result += '*';
-       }
-    result += '\n';
-  } 
-console.log(result);
-
-first: for (let i = 0; i < 3; i++) {
-    console.log(`First level: ${i}`);
-    for (let j = 0; j < 3; j++) {
-        console.log(`Second level: ${j}`);
-    }
-    for (let k = 0; k < 5; k++) {
-        if (k === 2) break first
-        console.log(`Third level: ${k}`);
-    }
-}
+console.log(personalMovieDB);
